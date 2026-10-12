@@ -1,22 +1,36 @@
-# Python IT Utilities
+# PowerShell IT Support Tools
 
-Five small command-line tools for everyday IT support tasks. Python 3 standard library only, nothing to install.
+Five beginner-friendly PowerShell scripts for practising Windows administration, IT support, and troubleshooting.
 
-| Script | What it does | Example |
-|--------|--------------|---------|
-| `subnet_calculator.py` | Shows network, broadcast, masks, and usable range for an IP/prefix | `python subnet_calculator.py 192.168.1.10/24` |
-| `password_generator.py` | Generates strong temporary passwords for onboarding | `python password_generator.py 16 5` |
-| `port_checker.py` | Checks whether common ports (HTTP, RDP, SSH, etc.) are open on a host | `python port_checker.py 192.168.1.20 3389 22` |
-| `file_organizer.py` | Sorts a messy folder into folders by file type (preview first) | `python file_organizer.py ~/Downloads --apply` |
-| `ping_sweep.py` | Finds live hosts on a small network (/24 or smaller) | `python ping_sweep.py 192.168.1.0/24` |
+## Projects
 
-## Why I built these
-Each one covers a task I'd run into on a service desk: planning a subnet, setting up a new user, troubleshooting "the app can't connect", cleaning up a user's files, and checking what's online.
+1. **System Information Checker** (`SystemInfo.ps1`) — Displays Windows, computer, memory, and uptime information.
+2. **Network Troubleshooter** (`NetworkTroubleshooter.ps1`) — Checks IP configuration, connectivity, and DNS resolution.
+3. **Disk Space Monitor** (`DiskSpaceMonitor.ps1`) — Reports drive space and warns about low storage.
+4. **Running Process Viewer** (`ProcessViewer.ps1`) — Lists processes using the most memory.
+5. **Windows Event Log Checker** (`EventLogChecker.ps1`) — Displays recent system errors and warnings.
 
-## Notes
-- `file_organizer.py` only previews unless you add `--apply`, and never overwrites existing files.
-- `ping_sweep.py`: only scan networks you own or have permission to scan. Some devices block ping, so a silent host isn't always offline.
-- `port_checker.py`: "closed/filtered" means no connection was made. It can't tell a closed port from a firewall block.
+## Skills
 
-## Testing
-Tested on Linux with Python 3.12. [Add: tested on Windows 11 with Python ___ once you've run them there.]
+PowerShell, Windows administration, networking, system monitoring, event logs, and troubleshooting.
+
+## Requirements
+
+- Windows with PowerShell
+- No third-party modules required
+
+## How to Run
+
+Open PowerShell in the project folder and run the desired script:
+
+```powershell
+.\SystemInfo.ps1
+.\NetworkTroubleshooter.ps1
+.\DiskSpaceMonitor.ps1
+.\ProcessViewer.ps1
+.\EventLogChecker.ps1
+```
+
+## About
+
+Created as hands-on learning projects to develop practical PowerShell and Windows troubleshooting skills for entry-level IT Support, Service Desk, and Junior System Administrator roles.
