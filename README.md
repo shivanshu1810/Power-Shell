@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/33319465/README.md)
 # Python IT Utilities
 
 Five small command-line tools for everyday IT support tasks. Python 3 standard library only, nothing to install.
