@@ -1,0 +1,16 @@
+
+# Display basic computer information
+
+Write-Host "=== System Information ==="
+
+Get-ComputerInfo |
+    Select-Object CsName, WindowsProductName, OsVersion
+
+# Show available memory
+Get-CimInstance Win32_OperatingSystem |
+    Select-Object @{Name="Free RAM (GB)"; Expression={
+        [math]::Round($_.FreePhysicalMemory / 1MB, 2)
+    }}
+
+# Show system uptime
+(Get-Date) - (Get-CimInstance Win32_OperatingSystem).LastBootUpTime\
